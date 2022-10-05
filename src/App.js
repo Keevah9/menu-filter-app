@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import menu from './data';
+import Menu from './Menu';
+import Categories from './Categories';
+import { useGeneralContext } from './context';
 function App() {
+  const {categories,menuItems} = useGeneralContext()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <section className='menu'>
+        <div className='title'>
+          <h2>our menu</h2>
+          <div className='underline'></div>
+          <Categories categories = {categories}/>
+          <Menu/>
+        </div>
+      </section>
+    </main>
   );
 }
 
