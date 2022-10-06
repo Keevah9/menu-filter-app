@@ -3,7 +3,6 @@ import { useGeneralContext } from './context';
 const Category = ({ category, index }) => {
     const {filterItems} = useGeneralContext()
   return (
-    <div>
       <button
         type="button"
         className="filter-btn"
@@ -13,7 +12,6 @@ const Category = ({ category, index }) => {
         {category}
         
       </button>
-    </div>
   );
 };
 
